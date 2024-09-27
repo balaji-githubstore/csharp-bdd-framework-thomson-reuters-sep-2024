@@ -15,13 +15,13 @@ namespace EmployeeManagementAutomation.StepDefinitions
         [When(@"I enter username as '(.*)'")]
         public void WhenIEnterUsernameAs(string username)
         {
-            Console.WriteLine("When"+username);
+            Console.WriteLine("When" + username);
         }
 
         [When(@"I enter password as '(.*)'")]
         public void WhenIEnterPasswordAs(string password)
         {
-            Console.WriteLine("When"+password);
+            Console.WriteLine("When" + password);
         }
 
         [When(@"I click on login")]
@@ -34,6 +34,12 @@ namespace EmployeeManagementAutomation.StepDefinitions
         public void ThenIShouldGetAccessToDashboardPageWith(string expectedText)
         {
             Console.WriteLine("expectedText");
+        }
+
+        [Then(@"I should not get access to dashboard with error as '(.*)'")]
+        public void ThenIShouldNotGetAccessToDashboardWithErrorAs(string expectedError)
+        {
+            Console.WriteLine("then" + expectedError);
         }
     }
 }

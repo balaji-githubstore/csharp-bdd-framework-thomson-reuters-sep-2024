@@ -10,5 +10,11 @@ Scenario: ValidLogin
 	And I click on login
 	Then I should get access to dashboard page with 'Quick Launch'
 
+Scenario: InvalidLogin
+	Given I have browser with OrangeHRM application
+	When I enter username as 'john'
+	And I enter password as 'john123'
+	And I click on login
+	Then I should not get access to dashboard with error as 'Invalid credentials'
 
 
