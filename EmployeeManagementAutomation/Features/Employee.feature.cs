@@ -131,7 +131,7 @@ this.ScenarioInitialize(scenarioInfo);
  testRunner.And("I click on save", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 17
- testRunner.Then(string.Format("I should see the profile name as \'{0} {1}|\'", fname, lname), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.Then(string.Format("I should see the profile name as \'{0} {1}\'", fname, lname), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
 #line 18
  testRunner.And("I should verify the employee full name in the text field", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
