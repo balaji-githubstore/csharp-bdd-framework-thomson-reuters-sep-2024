@@ -1,4 +1,5 @@
 using EmployeeManagementAutomation.Hooks;
+using NUnit.Framework;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 using System;
@@ -46,13 +47,15 @@ namespace EmployeeManagementAutomation.StepDefinitions
         [Then(@"I should get access to dashboard page with '(.*)'")]
         public void ThenIShouldGetAccessToDashboardPageWith(string expectedText)
         {
-            Console.WriteLine("expectedText");
+            string actualText = hooks.driver.FindElement(By.XPath("//p[contains(normalize-space(),'Quick')]")).Text;
+            Assert.That(actualText,Is.EqualTo(expectedText));
         }
 
         [Then(@"I should not get access to dashboard with error as '(.*)'")]
         public void ThenIShouldNotGetAccessToDashboardWithErrorAs(string expectedError)
         {
-            Console.WriteLine("then" + expectedError);
+            string actualError = hooks.driver.FindElement(By.XPath("//p[contains(normalize-space(),'Invalid')]")).Text;
+            Assert.That(actualError, Is.EqualTo(expectedError));
         }
     }
 }

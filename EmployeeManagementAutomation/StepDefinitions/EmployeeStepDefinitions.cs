@@ -51,6 +51,7 @@ namespace EmployeeManagementAutomation.StepDefinitions
         public void ThenIShouldSeeTheProfileNameAs(string expectedProfileName)
         {
             //get the profile name and assert it
+            ////div[@class='orangehrm-edit-employee-name']/h6
         }
 
         [Then(@"I should verify the employee full name in the text field")]
