@@ -36,6 +36,7 @@ namespace EmployeeManagementAutomation.StepDefinitions
             Console.WriteLine(table.Rows[0][0]);
             Console.WriteLine(table.Rows[0][1]);
 
+
             Console.WriteLine(table.Rows[0]["firstname"]);
             Console.WriteLine(table.Rows[0]["middlename"]);
         }
