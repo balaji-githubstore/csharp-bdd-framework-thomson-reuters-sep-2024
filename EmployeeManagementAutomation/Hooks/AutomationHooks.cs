@@ -11,6 +11,8 @@ namespace EmployeeManagementAutomation.Hooks
     public class AutomationHooks
     {
         public IWebDriver driver;
+        public int a = 10;
+        public string name = "orangehrm";
 
         [AfterScenario]
         public void EndScenario()

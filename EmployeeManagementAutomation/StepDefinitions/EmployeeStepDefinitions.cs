@@ -15,6 +15,7 @@ namespace EmployeeManagementAutomation.StepDefinitions
         private AutomationHooks hooks;
         public EmployeeStepDefinitions(AutomationHooks hooks)
         {
+            Console.WriteLine(hooks.GetHashCode());
             this.hooks = hooks;
         }
 

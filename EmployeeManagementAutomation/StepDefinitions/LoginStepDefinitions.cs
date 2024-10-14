@@ -7,21 +7,24 @@ using TechTalk.SpecFlow;
 namespace EmployeeManagementAutomation.StepDefinitions
 {
    [Binding]
-    public class LoginStepDefinitions
+    public class LoginStepDefinitions 
     {
         private AutomationHooks hooks;
         public LoginStepDefinitions(AutomationHooks hooks)
         {
+            Console.WriteLine(hooks.GetHashCode());
             this.hooks = hooks;
         }
+
 
         [Given(@"I have browser with OrangeHRM application")]
         public void GivenIHaveBrowserWithOrangeHRMApplication()
         {
-            hooks.driver = new ChromeDriver();
+            this.hooks.driver = new ChromeDriver();
             hooks.driver.Manage().Window.Maximize();
             hooks.driver.Manage().Timeouts().ImplicitWait=TimeSpan.FromSeconds(5);
             hooks.driver.Navigate().GoToUrl("https://opensource-demo.orangehrmlive.com/");
+            Console.WriteLine(hooks.a);
         }
 
         [When(@"I enter username as '(.*)'")]
